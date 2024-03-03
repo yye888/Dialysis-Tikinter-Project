@@ -3,6 +3,7 @@ from tkinter import ttk
 from tkmacosx import Button as button
 import requests
 import constants
+from math_functions import round_half_up
 
 # Lifting page to the top
 class Page(tk.Frame):
@@ -90,6 +91,17 @@ class Calculator(Page):
         calories = self.displaying_calories(weight)
         protein = self.displaying_protein(weight)
 
+   # Calculates daily intake and displays them on the screen
+    def calculating_calories(self, weight):
+        # Converts weight into float for accurate calculation and with the help of round_half_up() function,
+        # rounds the outcome to nearest ones place and returns as integer
+        daily_calories = int(round_half_up(float(weight.strip().strip("kg")) * 30))
+        return daily_calories
+
+    def calculating_protein(self, weight):
+        # converts weight to float and rounds to nearest ones place
+        daily_protein = int(round_half_up(float(weight.strip().strip("kg")) * 1.2))
+        return daily_protein
 
     def displaying_calories(self, weight):
         daily_calories = self.calculating_calories(weight)
