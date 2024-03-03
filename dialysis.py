@@ -89,3 +89,19 @@ class Calculator(Page):
     def calculated_values(self, weight):
         calories = self.displaying_calories(weight)
         protein = self.displaying_protein(weight)
+
+
+    def displaying_calories(self, weight):
+        daily_calories = self.calculating_calories(weight)
+        # Calorie label, but not actual calculated value in number only word
+        calories = "Calories per day:"
+        calories_result = tk.Label(
+            self, text=calories, font=("Arial", 18), bg=constants.MAIN_FRAME_COLOR
+        )
+        calories_result.place(relx=0.33, rely=0.5, relwidth=0.2, relheight=0.1)
+
+        # Unit labels
+        calories_unit = tk.Label(
+            self, text="kcal", font=("Arial", 18), bg=constants.MAIN_FRAME_COLOR
+        )
+        calories_unit.place(relx=0.545, rely=0.5, relwidth=0.2, relheight=0.1)
