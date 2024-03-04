@@ -134,6 +134,22 @@ class Calculator(Page):
         # Protein label, not calculated value only 'announcement' label in word
         protein = "Protein per day:"
         protein_result = tk.Label(
-            self, text=protein, font=("Arial", 18), bg=dConsts.MAIN_FRAME_COLOR
+            self, text=protein, font=("Arial", 18), bg=constants.MAIN_FRAME_COLOR
         )
         protein_result.place(relx=0.33, rely=0.6, relwidth=0.2, relheight=0.1)
+
+        # Unit labels
+        protein_unit = tk.Label(
+            self, text="g", font=("Arial", 18), bg=constants.MAIN_FRAME_COLOR
+        )
+        protein_unit.place(relx=0.54, rely=0.6, relwidth=0.2, relheight=0.1)
+
+        # Calculated value stored in string variables. Updates with re-submission
+        prot_number = tk.StringVar(value=daily_protein)
+        display_protein = tk.Label(
+            self,
+            textvariable=prot_number,
+            bg=constants.MAIN_FRAME_COLOR,
+            font=("Arial", 18),
+        )
+        display_protein.place(relx=0.52, rely=0.6, relwidth=0.1, relheight=0.1)
