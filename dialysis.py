@@ -117,3 +117,14 @@ class Calculator(Page):
             self, text="kcal", font=("Arial", 18), bg=constants.MAIN_FRAME_COLOR
         )
         calories_unit.place(relx=0.545, rely=0.5, relwidth=0.2, relheight=0.1)
+
+        # Creates StringVar for calories in order to update value with re-submission
+        cal_number = tk.StringVar(value=daily_calories)
+        # Automatic self updating StringVar printed to the screen (actual calculated value)
+        display_calories = tk.Label(
+            self,
+            textvariable=cal_number,
+            bg=constants.MAIN_FRAME_COLOR,
+            font=("Arial", 18),
+        )
+        display_calories.place(relx=0.52, rely=0.5, relwidth=0.1, relheight=0.1)
