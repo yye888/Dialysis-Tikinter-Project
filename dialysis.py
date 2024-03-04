@@ -128,3 +128,12 @@ class Calculator(Page):
             font=("Arial", 18),
         )
         display_calories.place(relx=0.52, rely=0.5, relwidth=0.1, relheight=0.1)
+
+    def displaying_protein(self, weight):
+        daily_protein = self.calculating_protein(weight)
+        # Protein label, not calculated value only 'announcement' label in word
+        protein = "Protein per day:"
+        protein_result = tk.Label(
+            self, text=protein, font=("Arial", 18), bg=dConsts.MAIN_FRAME_COLOR
+        )
+        protein_result.place(relx=0.33, rely=0.6, relwidth=0.2, relheight=0.1)
