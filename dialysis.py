@@ -172,3 +172,28 @@ class Guidelines(Page):
         bad_foods_frame = tk.Frame(
             notebook, width=900, height=500, bg=constants.BAD_FOOD_COLOR
         )
+
+        # Naming each tab
+        frames = [intake_frame, good_foods_frame, bad_foods_frame]
+        tab_names = [
+            "Daily Intake",
+            "Recommended Foods",
+            "Foods to Avoid",
+        ]
+        i = 0
+        for frame in frames:
+            notebook.add(frame, text=tab_names[i])
+            i += 1
+
+        # Header for each tab section
+        intake_title = self.tab_titles(intake_frame, "Daily Nutrition Guideline")
+        good_foods_title = self.tab_titles(
+            good_foods_frame,
+            "Low levels of phosphorous and potassium foods",
+            constants.GOOD_FOOD_COLOR,
+        )
+        bad_foods_title = self.tab_titles(
+            bad_foods_frame,
+            "High levels of phosphorous and potassium foods",
+            constants.BAD_FOOD_COLOR,
+        )
