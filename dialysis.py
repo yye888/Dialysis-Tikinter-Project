@@ -197,3 +197,16 @@ class Guidelines(Page):
             "High levels of phosphorous and potassium foods",
             constants.BAD_FOOD_COLOR,
         )
+
+        # Creating a frame for each tab and its content
+        # Daily Intake Tab Frames
+        tab1_left = tk.Frame(intake_frame, bg=constants.MAIN_FRAME_COLOR)
+        tab1_left.place(relx=0.25, rely=0.25, relwidth=0.2, relheight=0.6)
+        tab1_right = tk.Frame(intake_frame, bg=constants.MAIN_FRAME_COLOR)
+        tab1_right.place(relx=0.45, rely=0.25, relwidth=0.45, relheight=0.6)
+
+        # Recommended Foods Frames
+        tab2_left = self.tab_content_foods(good_foods_frame, constants.GOOD_FOOD_COLOR)
+        tab2_right = self.tab_content_foods(
+            good_foods_frame, constants.GOOD_FOOD_COLOR, 0.5
+        )
