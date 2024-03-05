@@ -153,3 +153,22 @@ class Calculator(Page):
             font=("Arial", 18),
         )
         display_protein.place(relx=0.52, rely=0.6, relwidth=0.1, relheight=0.1)
+
+
+class Guidelines(Page):
+    def __init__(self):
+        Page.__init__(self)
+        # Creating Notebook
+        notebook = ttk.Notebook(self, width=1000, height=500)
+        notebook.pack()
+
+        # Creating each tab frame
+        intake_frame = tk.Frame(
+            notebook, width=900, height=500, bg=constants.MAIN_FRAME_COLOR
+        )
+        good_foods_frame = tk.Frame(
+            notebook, width=900, height=500, bg=constants.GOOD_FOOD_COLOR
+        )
+        bad_foods_frame = tk.Frame(
+            notebook, width=900, height=500, bg=constants.BAD_FOOD_COLOR
+        )
