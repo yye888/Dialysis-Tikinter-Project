@@ -210,3 +210,9 @@ class Guidelines(Page):
         tab2_right = self.tab_content_foods(
             good_foods_frame, constants.GOOD_FOOD_COLOR, 0.5
         )
+
+        # Foods to Avoid Frames
+        avoid_left = self.tab_content_foods(bad_foods_frame, constants.BAD_FOOD_COLOR)
+        avoid_right = self.tab_content_foods(
+            bad_foods_frame, constants.BAD_FOOD_COLOR, 0.5
+        )
