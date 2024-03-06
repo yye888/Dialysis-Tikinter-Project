@@ -216,3 +216,15 @@ class Guidelines(Page):
         avoid_right = self.tab_content_foods(
             bad_foods_frame, constants.BAD_FOOD_COLOR, 0.5
         )
+
+        # Defining Actual Tab Contents
+        daily_left = self.daily_nutr_text(
+            tab1_left, constants.DAILY_NUTR_LEFT, constants.MAIN_FRAME_COLOR, "bold"
+        )
+        daily_right = self.daily_nutr_text(
+            tab1_right, constants.DAILY_NUTR_RIGHT, constants.MAIN_FRAME_COLOR
+        )
+
+        good_left = self.tab_body(
+            tab2_left, constants.GOOD_LIST_LEFT, constants.GOOD_FOOD_COLOR
+        )
