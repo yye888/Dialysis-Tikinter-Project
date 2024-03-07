@@ -228,3 +228,14 @@ class Guidelines(Page):
         good_left = self.tab_body(
             tab2_left, constants.GOOD_LIST_LEFT, constants.GOOD_FOOD_COLOR
         )
+
+                good_right = self.tab_body(
+            tab2_right, constants.GOOD_LIST_RIGHT, constants.GOOD_FOOD_COLOR
+        )
+
+        bad_left = self.tab_body(
+            avoid_left, constants.BAD_LIST_LEFT, constants.BAD_FOOD_COLOR
+        )
+        bad_right = self.tab_body(
+            avoid_right, constants.BAD_LIST_RIGHT, constants.BAD_FOOD_COLOR
+        )
