@@ -255,3 +255,24 @@ class Guidelines(Page):
         content_frame = tk.Frame(frame, bg=color)
         content_frame.place(relx=x, rely=0.2, relwidth=0.4)
         return content_frame
+    
+    # Generates all tab contents
+    # => recommended and foods to avoid
+    def tab_body(self, frame, content, color):
+        labels = []
+        for text in content:
+            label = tk.Label(frame, text=text, font=("Arial", 18), bg=color)
+            label.pack()
+            labels.append(label)
+        return labels
+
+    # => Daily intake content
+    def daily_nutr_text(self, frame, content, color, bold=""):
+        y = 0.1
+        labels = []
+        for text in content:
+            label = tk.Label(frame, text=text, font=("Arial", 18, bold), bg=color)
+            label.place(relx=0.1, rely=y)
+            y += 0.1
+            labels.append(label)
+        return labels
