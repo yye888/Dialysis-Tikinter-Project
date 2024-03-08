@@ -239,3 +239,19 @@ class Guidelines(Page):
         bad_right = self.tab_body(
             avoid_right, constants.BAD_LIST_RIGHT, constants.BAD_FOOD_COLOR
         )
+
+    # Method for creating all tab content headers
+    def tab_titles(self, frame, text, color=constants.MAIN_FRAME_COLOR):
+        title = tk.Label(
+            frame,
+            text=text,
+            font=("Arial", 20, "bold"),
+            bg=color,
+        )
+        title.pack(pady=25)
+
+    # Tab content frames generator
+    def tab_content_foods(self, frame, color, x=0.1):
+        content_frame = tk.Frame(frame, bg=color)
+        content_frame.place(relx=x, rely=0.2, relwidth=0.4)
+        return content_frame
