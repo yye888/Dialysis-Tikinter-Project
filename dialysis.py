@@ -276,3 +276,16 @@ class Guidelines(Page):
             y += 0.1
             labels.append(label)
         return labels
+    
+# Called Tips and Tricks Category on GUI
+class Information(Page):
+    def __init__(self):
+        # Main Content Frame
+        Page.__init__(self)
+        label = tk.Label(
+            self,
+            text="Important Things to Note",
+            font=("Arial", 24, "bold"),
+            bg=constants.MAIN_FRAME_COLOR,
+        )
+        label.pack(pady=30)
