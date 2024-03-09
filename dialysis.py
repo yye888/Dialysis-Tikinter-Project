@@ -289,3 +289,12 @@ class Information(Page):
             bg=constants.MAIN_FRAME_COLOR,
         )
         label.pack(pady=30)
+
+        # Generates the border around the text body => box frame
+        border_frame = tk.LabelFrame(self, bg=dConsts.MAIN_FRAME_COLOR)
+        border_frame.place(relx=0.05, rely=0.2, relwidth=0.9, relheight=0.7)
+
+        # Creating frame for each information column/section => The 3 small frames!
+        left_frame = self.sections(border_frame, 0.03)
+        middle_frame = self.sections(border_frame, 0.35)
+        right_frame = self.sections(border_frame, 0.67)
