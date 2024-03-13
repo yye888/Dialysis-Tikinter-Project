@@ -310,3 +310,16 @@ class Information(Page):
         left_content = self.frame_contents(left_frame, constants.SALT_CONTENT)
         middle_content = self.frame_contents(middle_frame, constants.PHOSPHOROUS_CONTENT)
         right_content = self.frame_contents(right_frame, constants.ADDITIONAL_CONTENT)
+
+    # Method I used to create the 3 small frames
+    def sections(self, frame, relx):
+        section_frame = tk.Frame(frame, bg=constants.MAIN_FRAME_COLOR)
+        section_frame.place(relx=relx, rely=0.08, relwidth=0.31, relheight=0.85)
+        return section_frame
+
+    # Method I used to create the header for each small frame
+    def headers(self, frame, text):
+        header = tk.Label(
+            frame, text=text, font=("Arial", 16, "bold"), bg=constants.MAIN_FRAME_COLOR
+        )
+        header.pack()  # place(relx=0.5, rely=0.02)
