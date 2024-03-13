@@ -323,3 +323,17 @@ class Information(Page):
             frame, text=text, font=("Arial", 16, "bold"), bg=constants.MAIN_FRAME_COLOR
         )
         header.pack()  # place(relx=0.5, rely=0.02)
+
+    # Generates the body content of each small frame
+    def frame_contents(self, frame, content):
+        y = 0.2
+        for point in content:
+            point = tk.Label(
+                frame,
+                text=point,
+                font=("Arial", 16),
+                justify="left",
+                bg=constants.MAIN_FRAME_COLOR,
+            )
+            point.place(relx=0.1, rely=y)
+            y += 0.2
