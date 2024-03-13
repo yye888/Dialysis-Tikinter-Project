@@ -291,10 +291,22 @@ class Information(Page):
         label.pack(pady=30)
 
         # Generates the border around the text body => box frame
-        border_frame = tk.LabelFrame(self, bg=dConsts.MAIN_FRAME_COLOR)
+        border_frame = tk.LabelFrame(self, bg=constants.MAIN_FRAME_COLOR)
         border_frame.place(relx=0.05, rely=0.2, relwidth=0.9, relheight=0.7)
 
         # Creating frame for each information column/section => The 3 small frames!
         left_frame = self.sections(border_frame, 0.03)
         middle_frame = self.sections(border_frame, 0.35)
         right_frame = self.sections(border_frame, 0.67)
+
+        # Creating labels for each section/column
+        left_header = self.headers(left_frame, "Salt & Pepper Substitute")
+        middle_header = self.headers(
+            middle_frame, "Decrease phosphorous\nlevels in food"
+        )
+        right_header = self.headers(right_frame, "Additional Insights")
+
+        # Contents to fill each frame of each category (content for 3 small frames)
+        left_content = self.frame_contents(left_frame, constants.SALT_CONTENT)
+        middle_content = self.frame_contents(middle_frame, constants.PHOSPHOROUS_CONTENT)
+        right_content = self.frame_contents(right_frame, constants.ADDITIONAL_CONTENT)
