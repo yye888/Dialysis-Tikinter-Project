@@ -361,3 +361,7 @@ class Nutrients(Page):
             aspect=800,
         )
         instructions.pack()
+
+        # Food item entry box
+        food_entry = tk.Entry(self)
+        food_entry.pack(pady=20)
