@@ -350,3 +350,14 @@ class Nutrients(Page):
             bg=constants.MAIN_FRAME_COLOR,
         )
         label.pack(pady=20)
+
+        # Instructions to enter food item and what nutrients to find
+        instructions = tk.Message(
+            self,
+            text="Enter a food item and find its nutrition information for calories, protein, sodium, potassium and phosphorous:",
+            background=constants.MAIN_FRAME_COLOR,
+            font=("Arial", 18),
+            justify="center",
+            aspect=800,
+        )
+        instructions.pack()
