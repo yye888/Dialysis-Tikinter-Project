@@ -337,3 +337,16 @@ class Information(Page):
             )
             point.place(relx=0.1, rely=y)
             y += 0.2
+
+
+# Food Nutrition API Search Engine (Nutrients Category of GUI)
+class Nutrients(Page):
+    def __init__(self):
+        Page.__init__(self)
+        label = tk.Label(
+            self,
+            text="Food Item Nutrition Finder",
+            font=("Arial", 20, "bold"),
+            bg=constants.MAIN_FRAME_COLOR,
+        )
+        label.pack(pady=20)
