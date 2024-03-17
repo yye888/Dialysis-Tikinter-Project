@@ -383,4 +383,4 @@ class Nutrients(Page):
         )
         first_note = self.note(
             "*Source: USDA FoodData Central API",
-            0.91,
+            0.91,)
