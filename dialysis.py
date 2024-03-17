@@ -365,3 +365,14 @@ class Nutrients(Page):
         # Food item entry box
         food_entry = tk.Entry(self)
         food_entry.pack(pady=20)
+
+        # Submit button
+        btn = button(
+            self,
+            text="Submit",
+            bg="#5ddeef",
+            activebackground="#4285f4",
+            font=("Arial", 14),
+            command=lambda: self.display_api_output(food_entry.get()),
+        )
+        btn.pack(pady=10)
