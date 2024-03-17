@@ -376,3 +376,11 @@ class Nutrients(Page):
             command=lambda: self.display_api_output(food_entry.get()),
         )
         btn.pack(pady=10)
+
+        # Unit and source information
+        second_note = self.note(
+            "**All nutrients are based on a portion size of 100g incl. liquids", 0.95
+        )
+        first_note = self.note(
+            "*Source: USDA FoodData Central API",
+            0.91,
