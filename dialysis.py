@@ -384,3 +384,24 @@ class Nutrients(Page):
         first_note = self.note(
             "*Source: USDA FoodData Central API",
             0.91,)
+        
+    # Create additional note marked with '*'
+    def note(self, text, y):
+        note = tk.Label(
+            self,
+            text=text,
+            font=10,
+            bg=constants.MAIN_FRAME_COLOR,
+        )
+        note.place(relx=0.05, rely=y)
+        return note
+    
+    # Fetching API and returning output to GUI
+    def getting_api(self, food):
+        # API source: https://fdc.nal.usda.gov/api-guide.html
+
+        API_KEY = constants.API
+        query = food
+        url = f"https://api.nal.usda.gov/fdc/v1/foods/search?api_key={API_KEY}&query={query}&dataType=Foundation,Survey%20%28FNDDS%29&pageSize=1&pageNumber=1"
+        response = requests.get(url).json()
+        return response

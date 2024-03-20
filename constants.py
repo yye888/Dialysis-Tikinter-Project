@@ -27,3 +27,6 @@ ADDITIONAL_CONTENT = [
     "- Pre-fill your water bottle\n  for the entire day",
     "- Remember food contains\n  water as well!\n  (fruits, soup, ice cream)",
 ]
+
+# API Key
+API = "DEMO_KEY"
