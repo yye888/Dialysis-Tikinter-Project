@@ -405,3 +405,10 @@ class Nutrients(Page):
         url = f"https://api.nal.usda.gov/fdc/v1/foods/search?api_key={API_KEY}&query={query}&dataType=Foundation,Survey%20%28FNDDS%29&pageSize=1&pageNumber=1"
         response = requests.get(url).json()
         return response
+    
+    def display_api_output(self, food):
+        # Storing nutrient values and unit in dict
+        response = self.getting_api(food)
+        nutrient_values = {}
+        i = 0
+   
