@@ -406,9 +406,5 @@ class Nutrients(Page):
         response = requests.get(url).json()
         return response
     
-    def display_api_output(self, food):
-        # Storing nutrient values and unit in dict
-        response = self.getting_api(food)
-        nutrient_values = {}
-        i = 0
+
    
