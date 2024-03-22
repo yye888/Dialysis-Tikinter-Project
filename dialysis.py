@@ -419,4 +419,7 @@ class Nutrients(Page):
                 ):
                     nutrient_values[item["value"]] = item["unitName"].lower()
                     i += 1
-   
+
+            # Creating frame for all data fetched from API
+            response_frame = tk.Frame(self, bg=constants.MAIN_FRAME_COLOR)
+            response_frame.place(relx=0.26, rely=0.52, relwidth=0.5, relheight=0.3)
