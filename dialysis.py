@@ -414,8 +414,8 @@ class Nutrients(Page):
         try:
             for item in response["foods"][0]["foodNutrients"]:
                 if (
-                    i < len(dConsts.NUTRIENT_NAME)
-                    and item["nutrientName"] == dConsts.NUTRIENT_NAME[i]
+                    i < len(constants.NUTRIENT_NAME)
+                    and item["nutrientName"] == constants.NUTRIENT_NAME[i]
                 ):
                     nutrient_values[item["value"]] = item["unitName"].lower()
                     i += 1
