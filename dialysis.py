@@ -411,4 +411,12 @@ class Nutrients(Page):
         response = self.getting_api(food)
         nutrient_values = {}
         i = 0    
+        try:
+            for item in response["foods"][0]["foodNutrients"]:
+                if (
+                    i < len(dConsts.NUTRIENT_NAME)
+                    and item["nutrientName"] == dConsts.NUTRIENT_NAME[i]
+                ):
+                    nutrient_values[item["value"]] = item["unitName"].lower()
+                    i += 1
    
