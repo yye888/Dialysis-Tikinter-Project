@@ -423,3 +423,9 @@ class Nutrients(Page):
             # Creating frame for all data fetched from API
             response_frame = tk.Frame(self, bg=constants.MAIN_FRAME_COLOR)
             response_frame.place(relx=0.26, rely=0.52, relwidth=0.5, relheight=0.3)
+
+            # Creating all API outcome labels
+            # => nutrient name labels
+            nutrient_lables = self.nutrient_label(
+                response_frame, constants.NUTRIENT_NAME, 0.1
+            )
