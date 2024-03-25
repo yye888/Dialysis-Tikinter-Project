@@ -429,3 +429,10 @@ class Nutrients(Page):
             nutrient_lables = self.nutrient_label(
                 response_frame, constants.NUTRIENT_NAME, 0.1
             )
+
+            # => nutrient value labels
+            display_values = self.nutrient_label(response_frame, nutrient_values, 0.55)
+            # => nutrient unit labels
+            display_unit = self.nutrient_label(
+                response_frame, nutrient_values.values(), 0.75
+            )
