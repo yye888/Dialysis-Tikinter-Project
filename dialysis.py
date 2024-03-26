@@ -448,6 +448,6 @@ class Nutrients(Page):
                 error_frame,
                 text="Item Not Found",
                 font=("Arial", 18),
-                bg=dConsts.MAIN_FRAME_COLOR,
+                bg=constants.MAIN_FRAME_COLOR,
             )
             error_label.pack(pady=40)
