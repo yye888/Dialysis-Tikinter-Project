@@ -436,3 +436,9 @@ class Nutrients(Page):
             display_unit = self.nutrient_label(
                 response_frame, nutrient_values.values(), 0.75
             )
+
+            # In case item is not included in db or couldn't be found due to spelling or any other error
+        except Exception:
+            # Creating frame for error outcome (covers name, value and unit frame)
+            error_frame = tk.Frame(self, bg=constants.MAIN_FRAME_COLOR)
+            error_frame.place(relx=0.3, rely=0.46, relwidth=0.4, relheight=0.4)
