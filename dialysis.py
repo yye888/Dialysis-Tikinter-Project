@@ -442,3 +442,12 @@ class Nutrients(Page):
             # Creating frame for error outcome (covers name, value and unit frame)
             error_frame = tk.Frame(self, bg=constants.MAIN_FRAME_COLOR)
             error_frame.place(relx=0.3, rely=0.46, relwidth=0.4, relheight=0.4)
+
+            # Error message label
+            error_label = tk.Label(
+                error_frame,
+                text="Item Not Found",
+                font=("Arial", 18),
+                bg=dConsts.MAIN_FRAME_COLOR,
+            )
+            error_label.pack(pady=40)
