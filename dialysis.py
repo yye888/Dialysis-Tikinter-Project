@@ -451,3 +451,17 @@ class Nutrients(Page):
                 bg=constants.MAIN_FRAME_COLOR,
             )
             error_label.pack(pady=40)
+
+    # Creates labels (outcome text) for nutrient name, value and unit
+    def nutrient_label(self, frame, nutrient_list, x):
+        y = 0
+        for nutrient in nutrient_list:
+            point = tk.Label(
+                frame,
+                text=nutrient,
+                font=("Arial", 18),
+                justify="left",
+                bg=dConsts.MAIN_FRAME_COLOR,
+            )
+            point.place(relx=x, rely=y)
+            y += 0.2
