@@ -461,7 +461,7 @@ class Nutrients(Page):
                 text=nutrient,
                 font=("Arial", 18),
                 justify="left",
-                bg=dConsts.MAIN_FRAME_COLOR,
+                bg=constants.MAIN_FRAME_COLOR,
             )
             point.place(relx=x, rely=y)
             y += 0.2
