@@ -474,7 +474,7 @@ class MenuButton(object):
             frame,
             text=btn_text,
             height=100,
-            background=dConsts.BTN_COLOR,
+            background=constants.BTN_COLOR,
             activebackground="orange",
             # activeforeground="black",
             font=("Arial", 24),
