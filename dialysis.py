@@ -465,3 +465,19 @@ class Nutrients(Page):
             )
             point.place(relx=x, rely=y)
             y += 0.2
+
+
+# All large menu buttons on the left hand side
+class MenuButton(object):
+    def __init__(self, frame, btn_text, raise_content):
+        btn = button(
+            frame,
+            text=btn_text,
+            height=100,
+            background=dConsts.BTN_COLOR,
+            activebackground="orange",
+            # activeforeground="black",
+            font=("Arial", 24),
+            command=raise_content,
+        )
+        btn.pack(fill="both")
